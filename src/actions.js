@@ -48,9 +48,7 @@ window.deletePost = deletePost;
 export function selectPost(id) {
     return {
         type: ACTION_SELECT_POST,
-        payload: {
-            id
-        }
+        payload: id
     }
 }
 
