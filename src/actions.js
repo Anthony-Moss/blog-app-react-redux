@@ -34,3 +34,4 @@ export function deletePost(id) {
         }
     };
 }
+window.deletePost = deletePost;
