@@ -18,13 +18,20 @@ export default function createPost(payload) {
         payload
     };
 }
+
 window.createPost = createPost;
 
-export function updatePost() {
+export function updatePost(id, payload) {
     return  {
-        type: ACTION_UPDATE_POST
+        type: ACTION_UPDATE_POST,
+        payload: {
+            id,
+            ...payload
+        }
     };
 }
+
+window.updatePost = updatePost;
 
 export function deletePost(id) {
     return {
@@ -34,4 +41,5 @@ export function deletePost(id) {
         }
     };
 }
+
 window.deletePost = deletePost;
